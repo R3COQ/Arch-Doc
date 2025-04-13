@@ -1,291 +1,138 @@
-# Arch Linux Sistem Kurulum ve Yapılandırma Dökümanı
 
-Bu döküman, bir Arch Linux sisteminde gerçekleştirilen çeşitli kurulum ve yapılandırma işlemlerini detaylandırmaktadır. İşlemler, Zsh kabuk yapılandırması, temel sistem araçlarının kurulumu, masaüstü uygulamalarının kurulumu, geliştirme araçlarının kurulumu ve diğer sistem ayarlarını kapsamaktadır.
+# Arch Linux Kurulumları ve Sistem Ayarları Dökümantasyonu
 
-## 1. Zsh Kabuk Yapılandırması ve Eklentileri
+## Paket Yöneticisi ile Kurulan Uygulamalar
 
-Zsh kabuğunu özelleştirmek ve kullanımını kolaylaştırmak için çeşitli eklentiler kurulmuş ve yapılandırılmıştır.
+### Temel Araçlar
+- `sudo pacman -S wget` - İnternetten dosya indirme aracı
+- `sudo pacman -S net-tools` - Ağ yönetim araçları (ifconfig, netstat gibi)
+- `sudo pacman -S bind-tools` - DNS araçları (dig, nslookup gibi)
+- `sudo pacman -S mtr` - Ağ diagnostik aracı
+- `sudo pacman -S speedtest-cli` - İnternet hız testi aracı
+- `sudo pacman -S usbutils` - USB aygıtları görüntüleme (lsusb)
+- `sudo pacman -S lm_sensors` - Donanım sensörleri izleme
+- `sudo pacman -S openssh` - SSH istemci ve sunucusu
+- `sudo pacman -S quota` - Disk kotaları yönetimi
+- `sudo pacman -S ntfs-3g exfat-utils dosfstools` - Dosya sistemi desteği
 
-* **Otomatik Öneri Eklentisi:**
-    ```bash
-    git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    ```
-    Bu komut, Zsh için otomatik komut önerileri sunan `zsh-autosuggestions` eklentisini Oh My Zsh özel eklentiler dizinine klonlar.
+### Docker ve Container Araçları
+- `sudo pacman -S docker docker-compose` - Container platformu ve orkestrasyon
+- `sudo pacman -S kubectl` - Kubernetes komut satırı aracı
+- `sudo pacman -S kubectx` - Kubernetes context değiştirme aracı
 
-* **Sözdizimi Vurgulama Eklentisi:**
-    ```bash
-    git clone [https://github.com/zsh-users/zsh-syntax-highlighting.git](https://github.com/zsh-users/zsh-syntax-highlighting.git) ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-    ```
-    Bu komut, Zsh komut satırında sözdizimi vurgulaması sağlayan `zsh-syntax-highlighting` eklentisini klonlar.
+### Geliştirme Araçları
+- `sudo pacman -S terraform` - Infrastructure as Code aracı
+- `sudo pacman -S ansible` - Konfigürasyon yönetim aracı
+- `sudo pacman -S pass gnupg` - Şifre yönetimi ve şifreleme
 
-* **`.zshrc` Dosyası Düzenleme:**
-    ```bash
-    nano .zshrc
-    ```
-    Bu komut, Zsh yapılandırma dosyasını Nano metin düzenleyici ile açar. Bu işlem birden çok kez tekrarlanmıştır, muhtemelen kurulan eklentileri etkinleştirmek ve diğer Zsh ayarlarını yapılandırmak için kullanılmıştır.
+### Multimedya
+- `sudo pacman -S vlc` - Video oynatıcı
+- `sudo pacman -S elisa` - Müzik oynatıcı
+- `sudo pacman -S obs-studio` - Ekran kayıt ve yayın yazılımı
+- `sudo pacman -S cheese kamoso` - Webcam uygulamaları
+- `sudo pacman -S ktorrent` - Torrent istemcisi
+- `sudo pacman -S kdenlive` - Video düzenleme yazılımı
+- `sudo pacman -S krita` - Dijital resim yazılımı
+- `sudo pacman -S gimp` - Görsel düzenleme yazılımı
 
-* **fzf Tab Tamamlama Eklentisi:**
-    ```bash
-    git clone [https://github.com/Aloxaf/fzf-tab](https://github.com/Aloxaf/fzf-tab) ~/.oh-my-zsh/custom/plugins/fzf-tab
-    ```
-    Bu komut, fzf (bulanık bulucu) ile entegre olarak gelişmiş tab tamamlama özellikleri sunan `fzf-tab` eklentisini klonlar.
+### Ofis ve Üretkenlik
+- `sudo pacman -S libreoffice` - Ofis paketi
+- `sudo pacman -S kcalc` - Hesap makinesi
+- `sudo pacman -S okular` - PDF görüntüleyici
+- `sudo pacman -S kate` - Gelişmiş metin editörü
+- `sudo pacman -S digikam` - Fotoğraf yönetimi
+- `sudo pacman -S kmail` - E-posta istemcisi
+- `sudo pacman -S filelight` - Disk kullanım görselleştirme
 
-* **Gelişmiş Tamamlama Eklentileri:**
-    ```bash
-    git clone [https://github.com/zsh-users/zsh-completions](https://github.com/zsh-users/zsh-completions) ~/.oh-my-zsh/custom/plugins/zsh-completions
-    ```
-    Bu komut, Zsh için daha kapsamlı ve özelleştirilmiş tamamlama tanımları içeren `zsh-completions` eklentisini klonlar.
+### Sistem Araçları
+- `sudo pacman -S timeshift` - Sistem yedekleme aracı
+- `sudo pacman -S neofetch` - Sistem bilgisi gösterimi
+- `sudo pacman -S partitionmanager` - Disk bölümleme aracı
+- `sudo pacman -S ksystemlog` - Sistem log görüntüleyici
+- `sudo pacman -S kompare` - Dosya karşılaştırma aracı
+- `sudo pacman -S kgpg` - GPG arayüzü
+- `sudo pacman -S isoimagewriter` - ISO yazma aracı
+- `sudo pacman -S kget` - İndirme yöneticisi
 
-* **Tamamlama Sistemini Başlatma:**
-    ```bash
-    autoload -U compinit && compinit
-    ```
-    Bu komut, Zsh tamamlama sistemini başlatır.
+### KDE Özel Araçlar
+- `sudo pacman -S yakuake` - Açılır terminal
+- `sudo pacman -S kdeconnect` - Telefon-PC entegrasyonu
+- `sudo pacman -S kwallet kwalletmanager` - Şifre yönetimi
+- `sudo pacman -S plasma-firewall` - Güvenlik duvarı arayüzü
+- `sudo pacman -S power-profiles-daemon` - Güç yönetimi
+- `sudo pacman -S krunner` - Uygulama başlatıcı
+- `sudo pacman -S gwenview` - Resim görüntüleyici
+- `sudo pacman -S kleopatra` - Sertifika yönetimi
 
-* **Hızlı Sözdizimi Vurgulama Eklentisi:**
-    ```bash
-    git clone [https://github.com/zdharma-continuum/fast-syntax-highlighting.git](https://github.com/zdharma-continuum/fast-syntax-highlighting.git) ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-    ```
-    Bu komut, daha hızlı performans sunan alternatif bir sözdizimi vurgulama eklentisi olan `fast-syntax-highlighting`i klonlar.
+### AUR (yay) ile Kurulan Uygulamalar
+- `yay -S google-chrome opera spotify` - Web tarayıcıları ve müzik servisi
+- `yay -S slack-desktop` - Mesajlaşma uygulaması
+- `yay -S teams-for-linux-bin` - Video konferans
+- `yay -S visual-studio-code-bin` - Kod editörü
+- `yay -S postman` - API geliştirme aracı
+- `yay -S docker-desktop` - Docker GUI arayüzü
+- `yay -S zapzap` - WhatsApp istemcisi
+- `yay -S octopi` - Grafik paket yöneticisi
 
-* **Geçmişte Alt Dize Arama Eklentisi:**
-    ```bash
-    git clone [https://github.com/zsh-users/zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
-    ```
-    Bu komut, komut geçmişinde alt dizelere göre arama yapmayı sağlayan `zsh-history-substring-search` eklentisini klonlar.
+## Sistem Ayarları
 
-## 2. Temel Sistem Araçlarının Kurulumu
+### Docker Konfigürasyonu
+```bash
+sudo systemctl enable --now docker.service
+sudo usermod -aG docker $USER
+newgrp docker
+```
 
-Sistem yönetimi ve temel işlevler için çeşitli araçlar Pacman paket yöneticisi kullanılarak kurulmuştur.
+### Güç Yönetimi
+```bash
+sudo systemctl enable --now power-profiles-daemon
+```
 
-* **Sistem Geri Yükleme Aracı:**
-    ```bash
-    sudo pacman -S timeshift
-    ```
-    Timeshift, sistem anlık görüntüleri alarak geri yükleme noktaları oluşturmayı sağlar.
+### Bluetooth
+```bash
+sudo systemctl enable bluetooth --now
+```
 
-* **Web Üzerinden Dosya İndirme Aracı:**
-    ```bash
-    sudo pacman -S wget
-    ```
-    Wget, komut satırından web üzerinden dosya indirmek için kullanılır.
+### Ses Sistemi
+```bash
+sudo pacman -S pipewire pipewire-alsa pipewire-pulse wireplumber
+sudo pacman -S bluez bluez-utils
+```
 
-* **Ağ Bağlantısını Test Etme Aracı:**
-    ```bash
-    sudo pacman -S ping
-    ```
-    Ping, ağdaki bir sunucuya ulaşılabilirliği test etmek için kullanılır.
+### Güvenlik Duvarı
+```bash
+sudo systemctl enable --now firewalld
+```
 
-* **Temel Ağ Araçları:**
-    ```bash
-    sudo pacman -S net-tools
-    ```
-    `net-tools` paketi, `ifconfig`, `netstat` gibi temel ağ yapılandırma ve izleme araçlarını içerir.
+### SSH Agent
+```bash
+sudo systemctl enable ssh-agent
+```
 
-* **Bulanık Arama Aracı:**
-    ```bash
-    sudo pacman -S fzf
-    ```
-    fzf, komut satırında dosyaları, geçmişi ve diğer öğeleri bulanık eşleştirme ile hızlı bir şekilde bulmayı sağlar.
+### GPG Konfigürasyonu
+```bash
+gpg --full-generate-key
+pass init [GPG_KEY_ID]
+```
 
-## 3. AUR Yardımcısı Yay Kurulumu
+### Zsh Eklentileri
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+autoload -U compinit && compinit
+```
 
-Arch User Repository (AUR), topluluk tarafından sağlanan paketleri içerir. Bu paketleri kolayca kurmak için `yay` yardımcı programı kurulmuştur.
+### Sistem Temizliği
+```bash
+sudo pacman -Rns $(pacman -Qdtq)
+sudo pacman -Scc
+sudo paccache -r
+```
 
-* **Yay Kaynak Kodlarını İndirme:**
-    ```bash
-    cd Workdir
-    git clone [https://aur.archlinux.org/yay.git](https://aur.archlinux.org/yay.git)
-    ```
+---
 
-* **Yay Paketini Derleme ve Kurma:**
-    ```bash
-    cd yay
-    makepkg -si
-    ```
-    `makepkg -si` komutu, paketi derler (`-s`) ve bağımlılıklarını kurduktan sonra (`-i`) yükler.
-
-## 4. Uygulama Kurulumları (Yay ve Pacman ile)
-
-Çeşitli masaüstü uygulamaları ve geliştirme araçları hem Pacman (resmi depolar) hem de Yay (AUR) kullanılarak kurulmuştur.
-
-* **Web Tarayıcıları ve Müzik Uygulaması:**
-    ```bash
-    yay -S google-chrome opera spotify
-    ```
-    Google Chrome, Opera web tarayıcıları ve Spotify müzik uygulaması AUR üzerinden kurulmuştur.
-
-* **Konteyner Platformu Docker:**
-    ```bash
-    sudo pacman -S docker
-    sudo pacman -S docker-compose
-    sudo systemctl enable --now docker.service
-    sudo usermod -aG docker $USER
-    ```
-    Docker ve Docker Compose, konteynerleştirilmiş uygulamaları yönetmek için kurulmuş ve Docker servisi başlatılmıştır. Kullanıcı, Docker komutlarını `sudo` olmadan çalıştırabilmek için `docker` grubuna eklenmiştir (genellikle yeniden oturum açmak gerekir).
-
-* **Kubernetes Yönetim Araçları:**
-    ```bash
-    sudo pacman -S kubectl
-    sudo pacman -S kubectx
-    ```
-    Kubectl, Kubernetes kümelerini yönetmek için kullanılan komut satırı aracıdır. Kubectx ise farklı Kubernetes kümeleri arasında kolayca geçiş yapmayı sağlar.
-
-* **Masaüstü Uygulamaları (Metin Düzenleyici, Belge Görüntüleyici, vb.):**
-    ```bash
-    sudo pacman -S kate okular kdeconnect power-profiles-daemon pipewire pipewire-alsa pipewire-pulse wireplumber bluez bluez-utils kcalc gwenview vlc neofetch flatpak plasma-firewall firewalld digikam kmail filelight kleopatra gimp krunner libreoffice
-    sudo systemctl enable --now power-profiles-daemon
-    sudo systemctl enable bluetooth --now
-    sudo systemctl enable --now firewalld
-    ```
-    Bu komutlar, Kate (gelişmiş metin düzenleyici), Okular (belge görüntüleyici), KDE Connect (telefon-bilgisayar entegrasyonu), güç profili yönetimi, ses ve video sunucusu PipeWire, Bluetooth desteği, temel masaüstü uygulamaları, Flatpak paket yöneticisi, güvenlik duvarı araçları, fotoğraf yönetimi, e-posta istemcisi, disk kullanım analiz aracı, sertifika yönetimi, resim düzenleme, uygulama başlatıcı ve ofis paketi gibi çeşitli masaüstü uygulamalarını kurar ve ilgili servisleri başlatır.
-
-* **Diğer Uygulamalar (Slack, Teams, VS Code):**
-    ```bash
-    yay -S slack-desktop
-    yay -S teams-for-linux-bin
-    yay -S visual-studio-code-bin
-    ```
-    Slack, Microsoft Teams ve Visual Studio Code gibi popüler uygulamalar AUR üzerinden kurulmuştur.
-
-* **Paket Kaldırma ve Önbellek Temizleme:**
-    ```bash
-    sudo pacman -Rns $(pacman -Qdtq)
-    sudo pacman -Scc
-    sudo paccache -r
-    sudo pacman -S paccache
-    ```
-    Bu komutlar, artık gerekmeyen (orphaned) paketleri kaldırır ve Pacman önbelleğini temizler. `paccache` aracı da kurulmuştur.
-
-* **Diğer Araçlar (Postman, Octopi, Parola Yöneticisi, Ağ Araçları vb.):**
-    ```bash
-    yay -S postman
-    yay -S octopi
-    sudo pacman -S pass gnupg mtr quota ntfs-3g exfat-utils dosfstools usbutils partitionmanager lm_sensors network-tools bind-tools speedtest-cli discord kwallet kwalletmanager gnupg pinentry openssh
-    ```
-    API geliştirme aracı Postman, Pacman için grafiksel arayüz Octopi, parola yöneticisi Pass, şifreleme aracı GnuPG, ağ teşhis araçları, disk kota yönetimi, dosya sistemi destek araçları, USB bilgi aracı, bölümleme yöneticisi, donanım sensör izleme, gelişmiş ağ araçları, DNS sorgulama araçları, internet hız testi, iletişim uygulaması Discord, KDE cüzdan yönetimi ve SSH araçları gibi çeşitli yardımcı programlar kurulmuştur.
-
-* **Grafik ve Multimedya Uygulamaları:**
-    ```bash
-    sudo pacman -S kolourpaint yakuake ksystemlog kompare kgpg isoimagewriter ktorrent elisa obs-studio cheese kamoso kget krita kdenlive
-    sudo pacman -Rns kolourpaint
-    ```
-    Basit resim düzenleme, açılır terminal, sistem günlük görüntüleyici, dosya karşılaştırma, GPG ön yüzü, ISO yazma aracı, BitTorrent istemcisi, müzik çalar, yayın ve kayıt yazılımı, web kamerası uygulamaları, indirme yöneticisi, dijital boyama ve video düzenleme yazılımları gibi çeşitli grafik ve multimedya uygulamaları kurulmuştur. Kolourpaint daha sonra kaldırılmıştır.
-
-## 5. Docker Yapılandırması
-
-Docker kullanımı için ek yapılandırmalar yapılmıştır.
-
-* **Docker Desktop Kurulumu:**
-    ```bash
-    yay -S docker-desktop
-    ```
-    Docker Desktop, Docker'ı grafiksel bir arayüz üzerinden yönetmeyi sağlar.
-
-* **GPG ve Pass ile Docker Kimlik Bilgilerini Yönetme:**
-    ```bash
-    sudo pacman -S pass gnupg
-    gpg --full-generate-key
-    nano ~/.docker/config.json
-    pass init <GPG_ANAHTAR_ID>
-    nano ~/.docker/config.json
-    ```
-    Bu adımlar, Docker kimlik bilgilerini güvenli bir şekilde saklamak için Pass parola yöneticisinin GPG ile birlikte kullanımını yapılandırmayı amaçlamaktadır. `<GPG_ANAHTAR_ID>` yerine gerçek GPG anahtar kimliği girilmelidir.
-
-## 6. Diğer Sistem Ayarları ve Araçları
-
-Çeşitli diğer sistem ayarları ve yardımcı araçlar da kurulmuştur.
-
-* **Ağ İzleme Aracı:**
-    ```bash
-    sudo pacman -S mtr
-    mtr 213.14.134.174
-    ```
-    MTR (My Traceroute), ağ yolu üzerindeki yönlendiricileri ve gecikmeleri izlemek için kullanılır.
-
-* **Disk Kotası Yönetimi:**
-    ```bash
-    sudo pacman -S quota
-    ```
-    Disk kotalarını yönetmek için gerekli araçlar kurulmuştur.
-
-* **Dosya Sistemi Desteği:**
-    ```bash
-    sudo pacman -S ntfs-3g exfat-utils dosfstools
-    ```
-    NTFS, exFAT ve FAT dosya sistemlerine okuma/yazma desteği eklenmiştir.
-
-* **USB Cihazlarını Listeleme:**
-    ```bash
-    lsusb
-    sudo pacman -S usbutils
-    lsusb
-    ```
-    `lsusb` komutu, bağlı USB cihazlarını listeler. `usbutils` paketi bu komutu içerir.
-
-* **Disk Bölümleme Aracı:**
-    ```bash
-    sudo pacman -S partitionmanager
-    ```
-    Partition Manager, disk bölümlerini grafiksel olarak yönetmek için kullanılır.
-
-* **Donanım Sensörlerini İzleme:**
-    ```bash
-    sudo pacman -S lm_sensors
-    ```
-    `lm_sensors`, sıcaklık, fan hızı gibi donanım sensörlerinden bilgi almayı sağlar.
-
-* **Gelişmiş Ağ Araçları ve DNS Sorgulama:**
-    ```bash
-    sudo pacman -S network-tools
-    sudo pacman -S bind-tools
-    ```
-    `network-tools` ve `bind-tools` paketleri, gelişmiş ağ yapılandırma ve DNS sorgulama araçlarını içerir.
-
-* **İnternet Hız Testi:**
-    ```bash
-    sudo pacman -S speedtest-cli
-    ```
-    `speedtest-cli`, komut satırından internet hızını test etmek için kullanılır.
-
-* **İletişim Uygulaması Discord:**
-    ```bash
-    sudo pacman -S discord
-    ```
-    Discord, sesli ve yazılı iletişim için popüler bir uygulamadır.
-
-* **KDE Cüzdan Yönetimi:**
-    ```bash
-    sudo pacman -S kwallet kwalletmanager
-    ```
-    KDE Wallet, parolaları ve diğer hassas bilgileri güvenli bir şekilde saklamak için kullanılır.
-
-* **GPG ve PIN Giriş Araçları:**
-    ```bash
-    sudo pacman -S gnupg pinentry
-    ```
-    GnuPG ve PIN giriş diyalogları, şifreleme ve kimlik doğrulama işlemleri için gereklidir.
-
-* **SSH (Güvenli Kabuk):**
-    ```bash
-    sudo pacman -S openssh
-    systemctl status ssh-agent.service
-    which ssh-agent
-    sudo systemctl status ssh-agent
-    sudo systemctl enable ssh-agent
-    ```
-    OpenSSH, güvenli uzaktan erişim için kullanılır. `ssh-agent` servisi de etkinleştirilmiştir.
-
-* **Sistem Güncellemesi:**
-    ```bash
-    sudo pacman -Syu
-    ```
-    Bu komut, sistemdeki tüm paketleri ve paket listelerini günceller.
-
-* **Yeniden Başlatma:**
-    ```bash
-    reboot
-    ```
-    Sistemdeki değişikliklerin etkinleşmesi için birkaç kez yeniden başlatma işlemi yapılmıştır.
-
-Bu döküman, gerçekleştirilen işlemlerin kapsamlı bir özetini sunmaktadır. Her bir komutun amacı ve sistem üzerindeki etkisi açıklanmıştır. Bu bilgiler, sistemin mevcut durumu ve yapılan yapılandırmalar hakkında genel bir bakış sağlar.
+Bu dökümantasyon, sistemde yapılan kurulum ve konfigürasyon işlemlerinin tam listesini içermektedir. Her bir paket ve ayar, sistemin işlevselliğini artırmak ve kullanıcı deneyimini geliştirmek için eklenmiştir.
