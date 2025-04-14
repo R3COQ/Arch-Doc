@@ -39,12 +39,12 @@ source ~/.zshrc
 
 ---
 
-## 🧰 Genel Uygulama Kurulumları
+# 🛠️ Sistem Sürücü Kurulumları
 
+## 🔋 Güç Yönetimi
 ```bash
-sudo pacman -S kdeconnect 
-sudo pacman -S power-profiles-daemon
-sudo systemctl enable --now power-profiles-daemon
+sudo pacman -S power-profiles-daemon     # Güç yönetimi aracı
+sudo systemctl enable --now power-profiles-daemon  # Güç yönetimi servisini etkinleştir ve başlat
 ```
 
 ```bash
