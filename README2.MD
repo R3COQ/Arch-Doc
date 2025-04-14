@@ -160,7 +160,6 @@ sudo pacman -S htop            # Sistem kaynakları izleme
 
 #### 🔐 Güvenlik ve Bağlantı Araçları
 ```bash
-sudo pacman -S openssh         # SSH sunucu ve istemci
 sudo pacman -S quota           # Disk kotası yönetimi
 ```
 
@@ -182,13 +181,13 @@ sudo pacman -S neofetch        # Sistem bilgisi gösterimi
 sudo pacman -S kubectl kubectx
 ```
 
-#### Terraform & Ansible
+#### 🌐 Terraform & Ansible Kurulumu
 ```bash
 sudo pacman -S terraform    # Infrastructure as Code
 sudo pacman -S ansible      # Otomasyon ve konfigürasyon yönetimi
 ```
 
-#### Docker
+#### 🐳 Docker Kurulumu
 ```bash
 sudo pacman -S docker docker-compose
 sudo systemctl enable --now docker
