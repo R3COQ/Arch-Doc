@@ -42,7 +42,8 @@ source ~/.zshrc
 ## 🧰 Genel Uygulama Kurulumları
 
 ```bash
-sudo pacman -S ark kate okular kdeconnect power-profiles-daemon pipewire pipewire-alsa pipewire-pulse wireplumber
+sudo pacman -S kdeconnect 
+sudo pacman -S power-profiles-daemon
 sudo systemctl enable --now power-profiles-daemon
 ```
 
