@@ -139,30 +139,40 @@ sudo pacman -S yakuake          # Açılır terminal
 sudo pacman -S neofetch         # Sistem bilgisi gösterimi
 ```
 
-### Ofis ve Üretkenlik
-
-```bash
-
----
 
 ## 🧰 Sistem Uygulama Kurulumları
 
+### 🌐 Ağ Araçları
 ```bash
 sudo pacman -S wget            # İnternetten dosya indirme
 sudo pacman -S net-tools       # Ağ araçları (ifconfig, netstat)
 sudo pacman -S bind-tools      # DNS sorguları (dig, nslookup)
 sudo pacman -S mtr             # Ağ bağlantı testi ve takibi
 sudo pacman -S speedtest-cli   # İnternet hız testi
-sudo pacman -S usbutils        # USB cihazlarını gör (lsusb)
-sudo pacman -S lm_sensors      # Donanım sıcaklık sensörleri
-sudo pacman -S openssh         # SSH sunucu ve istemci
-sudo pacman -S quota           # Disk kotası yönetimi
-sudo pacman -S ntfs-3g exfat-utils dosfstools # Dosya sistemi desteği (NTFS, exFAT, FAT32)
-sudo pacman -S htop            # Sistem kaynakları izleme
-sudo pacman -S neofetch        # Sistem bilgisi gösterimi
+```
+
+### 🔌 USB ve Donanım Araçları
+```bash
 sudo pacman -S usbutils        # USB cihazlarını gör (lsusb)
 sudo pacman -S lm_sensors      # Donanım sıcaklık sensörleri - Bilgisayarın sıcaklık, voltaj ve fan hızını izlemek için kullanılır.
+sudo pacman -S htop            # Sistem kaynakları izleme
+```
+
+### 🔐 Güvenlik ve Bağlantı Araçları
+```bash
+sudo pacman -S openssh         # SSH sunucu ve istemci
+sudo pacman -S quota           # Disk kotası yönetimi
+```
+
+### 🖥️ Dosya Sistemi ve Depolama Araçları
+```bash
+sudo pacman -S ntfs-3g exfat-utils dosfstools # Dosya sistemi desteği (NTFS, exFAT, FAT32)
 sudo pacman -S partitionmanager  # Disk bölümleme aracı
+```
+
+### 📊 Sistem Bilgisi ve İzleme Araçları
+```bash
+sudo pacman -S neofetch        # Sistem bilgisi gösterimi
 ```
 
 ## 🧑‍💻 Geliştirici Araçları
