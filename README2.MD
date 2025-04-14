@@ -52,16 +52,16 @@ sudo pacman -S bluez bluez-utils
 sudo systemctl enable bluetooth --now
 ```
 
-### KDE Applications
+# KDE Applications
 
-# 📊 Hesaplama ve Ofis Araçları
+## 📊 Hesaplama ve Ofis Araçları
 ```bash
 sudo pacman -S kcalc            # Hesap makinesi
 sudo pacman -S libreoffice      # Ofis paketi
 sudo pacman -S okular           # PDF görüntüleyici
 sudo pacman -S kate             # Gelişmiş metin editörü
 ```
-# 🖼️ Resim ve Fotoğraf Yönetimi
+## 🖼️ Resim ve Fotoğraf Yönetimi
 ```bash
 sudo pacman -S gwenview         # Resim görüntüleyici
 sudo pacman -S digikam          # Fotoğraf yönetimi
@@ -69,7 +69,7 @@ sudo pacman -S krita            # Dijital resim yazılımı
 sudo pacman -S gimp             # Görsel düzenleme yazılımı
 ```
 
-# 🎥 Video ve Multimedya
+## 🎥 Video ve Multimedya
 ```bash
 sudo pacman -S vlc              # Video oynatıcı
 sudo pacman -S elisa            # Müzik oynatıcı
@@ -79,13 +79,13 @@ sudo pacman -S ktorrent         # Torrent istemcisi
 sudo pacman -S kdenlive         # Video düzenleme yazılımı
 ```
 
-# 📧 İletişim ve Şifre Yönetimi
+## 📧 İletişim ve Şifre Yönetimi
 ```bash
 sudo pacman -S kmail            # E-posta istemcisi
 sudo pacman -S kwallet kwalletmanager # Şifre yönetimi
 ```
 
-# 🛠️ Sistem Araçları ve Yönetimi
+## 🛠️ Sistem Araçları ve Yönetimi
 ```bash
 sudo pacman -S timeshift        # Sistem yedekleme aracı
 sudo pacman -S partitionmanager # Disk bölümleme aracı
@@ -97,7 +97,7 @@ sudo pacman -S kget             # İndirme yöneticisi
 sudo pacman -S filelight        # Disk kullanım görselleştirme
 ```
 
-# ⚙️ Uygulama Başlatıcı ve Diğer Araçlar
+## ⚙️ Uygulama Başlatıcı ve Diğer Araçlar
 ```bash
 sudo pacman -S krunner          # Uygulama başlatıcı
 sudo pacman -S kdeconnect       # Telefon-PC entegrasyonu
@@ -107,7 +107,7 @@ sudo pacman -S kleopatra        # Sertifika yönetimi
 sudo pacman -S yakuake          # Açılır terminal
 ```
 
-# 🖥️ Sistem Bilgisi ve İzleme
+## 🖥️ Sistem Bilgisi ve İzleme
 ```bash
 sudo pacman -S neofetch         # Sistem bilgisi gösterimi
 ```
