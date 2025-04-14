@@ -54,20 +54,19 @@ sudo systemctl enable bluetooth --now
 
 ### KDE Applications
 
-```bash
-# Hesaplama ve Ofis Araçları
+# 📊 Hesaplama ve Ofis Araçları
 sudo pacman -S kcalc            # Hesap makinesi
 sudo pacman -S libreoffice      # Ofis paketi
 sudo pacman -S okular           # PDF görüntüleyici
 sudo pacman -S kate             # Gelişmiş metin editörü
 
-# Resim ve Fotoğraf Yönetimi
+# 🖼️ Resim ve Fotoğraf Yönetimi
 sudo pacman -S gwenview         # Resim görüntüleyici
 sudo pacman -S digikam          # Fotoğraf yönetimi
 sudo pacman -S krita            # Dijital resim yazılımı
 sudo pacman -S gimp             # Görsel düzenleme yazılımı
 
-# Video ve Multimedya
+# 🎥 Video ve Multimedya
 sudo pacman -S vlc              # Video oynatıcı
 sudo pacman -S elisa            # Müzik oynatıcı
 sudo pacman -S obs-studio       # Ekran kayıt ve yayın yazılımı
@@ -75,11 +74,11 @@ sudo pacman -S cheese kamoso    # Webcam uygulamaları
 sudo pacman -S ktorrent         # Torrent istemcisi
 sudo pacman -S kdenlive         # Video düzenleme yazılımı
 
-# İletişim ve Şifre Yönetimi
+# 📧 İletişim ve Şifre Yönetimi
 sudo pacman -S kmail            # E-posta istemcisi
 sudo pacman -S kwallet kwalletmanager # Şifre yönetimi
 
-# Sistem Araçları ve Yönetimi
+# 🛠️ Sistem Araçları ve Yönetimi
 sudo pacman -S timeshift        # Sistem yedekleme aracı
 sudo pacman -S partitionmanager # Disk bölümleme aracı
 sudo pacman -S ksystemlog       # Sistem log görüntüleyici
@@ -89,7 +88,7 @@ sudo pacman -S isoimagewriter   # ISO yazma aracı
 sudo pacman -S kget             # İndirme yöneticisi
 sudo pacman -S filelight        # Disk kullanım görselleştirme
 
-# Uygulama Başlatıcı ve Diğer Araçlar
+# ⚙️ Uygulama Başlatıcı ve Diğer Araçlar
 sudo pacman -S krunner          # Uygulama başlatıcı
 sudo pacman -S kdeconnect       # Telefon-PC entegrasyonu
 sudo pacman -S plasma-firewall  # Güvenlik duvarı arayüzü
@@ -97,9 +96,8 @@ sudo pacman -S power-profiles-daemon # Güç yönetimi
 sudo pacman -S kleopatra        # Sertifika yönetimi
 sudo pacman -S yakuake          # Açılır terminal
 
-# Sistem Bilgisi ve İzleme
+# 🖥️ Sistem Bilgisi ve İzleme
 sudo pacman -S neofetch         # Sistem bilgisi gösterimi
-```
 
 
 ### Ofis ve Üretkenlik
