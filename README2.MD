@@ -52,7 +52,7 @@ sudo pacman -S bluez bluez-utils
 sudo systemctl enable bluetooth --now
 ```
 
-# KDE Applications
+# 🧰 KDE Applications
 
 ## 📊 Hesaplama ve Ofis Araçları
 ```bash
