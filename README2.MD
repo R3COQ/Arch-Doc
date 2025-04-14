@@ -53,7 +53,18 @@ sudo systemctl enable bluetooth --now
 ```
 
 ```bash
-sudo pacman -S kcalc gwenview vlc neofetch htop flatpak fwupd digikam kmail filelight krunner libreoffice kleopatra timeshift gimp
+sudo pacman -S kcalc 
+sudo pacman -S gwenview
+sudo pacman -S vlc
+sudo pacman -S neofetch
+sudo pacman -S digikam
+sudo pacman -S kmail 
+sudo pacman -S filelight 
+sudo pacman -S krunner 
+sudo pacman -S libreoffice 
+sudo pacman -S kleopatra 
+sudo pacman -S timeshift
+sudo pacman -S gimp
 ```
 
 ---
