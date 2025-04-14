@@ -4,6 +4,23 @@
 
 ## 🐚 Zsh Yapılandırması
 
+
+
+### 1. **Zsh Kurulumu**
+
+Zsh, sisteminizde yüklü değilse, aşağıdaki komutla kurabilirsiniz:
+
+```bash
+sudo pacman -S zsh        # Zsh yükleme
+
+2. Oh-My-Zsh Kurulumu
+
+Oh My Zsh, Zsh için popüler bir yapılandırma yönetim aracıdır. Aşağıdaki komutla kurabilirsiniz:
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  # Oh-My-Zsh yükleme
+
+Kurulumdan sonra, ~/.zshrc dosyasına otomatik olarak Oh-My-Zsh yapılandırması eklenecektir.
+
 ### ⚙️ Oh-My-Zsh ve Eklenti Kurulumu
 
 ```bash
