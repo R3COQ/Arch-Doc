@@ -55,7 +55,7 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 ```
 - **Açıklama**: Bu eklenti, sekme tamamlama için `fzf` arayüzünü entegre eder ve daha hızlı dosya aramaları sağlar.
 
-## 🔄 Zsh Konfigürasyonunun Yüklenmesi
+#### 🔄 Zsh Konfigürasyonunun Yüklenmesi
 ```bash
 source ~/.zshrc
 ```
