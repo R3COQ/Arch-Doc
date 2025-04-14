@@ -52,33 +52,98 @@ sudo pacman -S bluez bluez-utils
 sudo systemctl enable bluetooth --now
 ```
 
+### KDE Applications
+
 ```bash
-sudo pacman -S kcalc 
-sudo pacman -S gwenview
-sudo pacman -S vlc
-sudo pacman -S neofetch
-sudo pacman -S digikam
-sudo pacman -S kmail 
-sudo pacman -S filelight 
-sudo pacman -S krunner 
-sudo pacman -S libreoffice 
-sudo pacman -S kleopatra 
-sudo pacman -S timeshift
-sudo pacman -S gimp
+# Hesaplama ve Ofis Araçları
+sudo pacman -S kcalc            # Hesap makinesi
+sudo pacman -S libreoffice      # Ofis paketi
+sudo pacman -S okular           # PDF görüntüleyici
+sudo pacman -S kate             # Gelişmiş metin editörü
+
+# Resim ve Fotoğraf Yönetimi
+sudo pacman -S gwenview         # Resim görüntüleyici
+sudo pacman -S digikam          # Fotoğraf yönetimi
+sudo pacman -S krita            # Dijital resim yazılımı
+sudo pacman -S gimp             # Görsel düzenleme yazılımı
+
+# Video ve Multimedya
+sudo pacman -S vlc              # Video oynatıcı
+sudo pacman -S elisa            # Müzik oynatıcı
+sudo pacman -S obs-studio       # Ekran kayıt ve yayın yazılımı
+sudo pacman -S cheese kamoso    # Webcam uygulamaları
+sudo pacman -S ktorrent         # Torrent istemcisi
+sudo pacman -S kdenlive         # Video düzenleme yazılımı
+
+# İletişim ve Şifre Yönetimi
+sudo pacman -S kmail            # E-posta istemcisi
+sudo pacman -S kwallet kwalletmanager # Şifre yönetimi
+
+# Sistem Araçları ve Yönetimi
+sudo pacman -S timeshift        # Sistem yedekleme aracı
+sudo pacman -S partitionmanager # Disk bölümleme aracı
+sudo pacman -S ksystemlog       # Sistem log görüntüleyici
+sudo pacman -S kompare          # Dosya karşılaştırma aracı
+sudo pacman -S kgpg             # GPG arayüzü
+sudo pacman -S isoimagewriter   # ISO yazma aracı
+sudo pacman -S kget             # İndirme yöneticisi
+sudo pacman -S filelight        # Disk kullanım görselleştirme
+
+# Uygulama Başlatıcı ve Diğer Araçlar
+sudo pacman -S krunner          # Uygulama başlatıcı
+sudo pacman -S kdeconnect       # Telefon-PC entegrasyonu
+sudo pacman -S plasma-firewall  # Güvenlik duvarı arayüzü
+sudo pacman -S power-profiles-daemon # Güç yönetimi
+sudo pacman -S kleopatra        # Sertifika yönetimi
+sudo pacman -S yakuake          # Açılır terminal
+
+# Sistem Bilgisi ve İzleme
+sudo pacman -S neofetch         # Sistem bilgisi gösterimi
 ```
+
+
+### Ofis ve Üretkenlik
+
+```bash
 
 ---
 
+## 🧰 Sistem Uygulama Kurulumları
+
+```bash
+sudo pacman -S wget            # İnternetten dosya indirme
+sudo pacman -S net-tools       # Ağ araçları (ifconfig, netstat)
+sudo pacman -S bind-tools      # DNS sorguları (dig, nslookup)
+sudo pacman -S mtr             # Ağ bağlantı testi ve takibi
+sudo pacman -S speedtest-cli   # İnternet hız testi
+sudo pacman -S usbutils        # USB cihazlarını gör (lsusb)
+sudo pacman -S lm_sensors      # Donanım sıcaklık sensörleri
+sudo pacman -S openssh         # SSH sunucu ve istemci
+sudo pacman -S quota           # Disk kotası yönetimi
+sudo pacman -S ntfs-3g exfat-utils dosfstools # Dosya sistemi desteği (NTFS, exFAT, FAT32)
+sudo pacman -S htop            # Sistem kaynakları izleme
+sudo pacman -S neofetch        # Sistem bilgisi gösterimi
+sudo pacman -S usbutils        # USB cihazlarını gör (lsusb)
+sudo pacman -S lm_sensors      # Donanım sıcaklık sensörleri - Bilgisayarın sıcaklık, voltaj ve fan hızını izlemek için kullanılır.
+sudo pacman -S partitionmanager  # Disk bölümleme aracı
+```
+
 ## 🧑‍💻 Geliştirici Araçları
 
-### Visual Studio Code
+### Kubernetes
 ```bash
-yay -S visual-studio-code-bin
+sudo pacman -S kubectl kubectx
+```
+
+### Terraform & Ansible
+```bash
+sudo pacman -S terraform    # Infrastructure as Code
+sudo pacman -S ansible      # Otomasyon ve konfigürasyon yönetimi
 ```
 
 ### Docker
 ```bash
-sudo pacman -S docker
+sudo pacman -S docker docker-compose
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
 newgrp docker
@@ -91,9 +156,9 @@ yay -S docker-desktop
 systemctl --user enable --now docker-desktop
 ```
 
-### Kubernetes
+### Visual Studio Code
 ```bash
-sudo pacman -S kubectl kubectx
+yay -S visual-studio-code-bin
 ```
 
 ### Lens
@@ -132,7 +197,15 @@ makepkg -si
 
 ### AUR'dan uygulama kurulumları:
 ```bash
-yay -S google-chrome opera spotify slack-desktop zapzap teams-for-linux postman octopi
+yay -S visual-studio-code-bin
+yay -S docker-desktop
+yay -S google-chrome 
+yay -S opera spotify
+yay -S slack-desktop 
+yay -S zapzap 
+yay -S teams-for-linux-bin 
+yay -S postman
+yay -S octopi
 ```
 
 ---
@@ -151,7 +224,6 @@ docker compose up -d
 ## 📊 Sistem Araçları ve Bilgileri
 
 ```bash
-sudo pacman -S mtr quota quota-tools ntfs-3g exfat-utils dosfstools usbutils lm_sensors partitionmanager
 mtr <ip_adresi>
 lsblk
 lsusb
