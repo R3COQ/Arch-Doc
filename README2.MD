@@ -1,41 +1,48 @@
 
 # 📘 Arch Linux Kurulum ve Yapılandırma Dökümantasyonu
 
+
 ## 🐚 Zsh Yapılandırması
 
-### Oh-My-Zsh ve Eklenti Kurulumu
+### ⚙️ Oh-My-Zsh ve Eklenti Kurulumu
 
 ```bash
 nano .zshrc
 ```
 
-#### Eklentiler
+### 🔌 Eklentiler
 
-1. **Autosuggestions**
+1. **🔄 Autosuggestions**
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
+- **Açıklama**: Bu eklenti, komutları yazarken geçmiş komutlardan otomatik öneriler sunar.
 
-2. **Syntax Highlighting**
+2. **🎨 Syntax Highlighting**
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
+- **Açıklama**: Komut satırındaki sözdizimi hatalarını renkli olarak vurgular.
 
-3. **History Substring Search**
+3. **🔍 History Substring Search**
 ```bash
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 ```
+- **Açıklama**: Geçmişteki komutları, sadece komutun bir kısmıyla aramanıza olanak tanır.
 
-4. **fzf-tab**
+4. **🔲 fzf-tab**
 ```bash
-sudo pacman -S fzf
+sudo pacman -S fzf          # fzf komut satırı aracı kurulur
 git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 ```
+- **Açıklama**: Bu eklenti, sekme tamamlama için `fzf` arayüzünü entegre eder ve daha hızlı dosya aramaları sağlar.
 
-#### Zsh Konfigürasyonunun Yüklenmesi
+### 🔄 Zsh Konfigürasyonunun Yüklenmesi
 ```bash
 source ~/.zshrc
 ```
+- **Açıklama**: Yapılandırma dosyanızı yeniden yükler ve yapılan değişikliklerin aktif olmasını sağlar.
+
 
 ---
 
