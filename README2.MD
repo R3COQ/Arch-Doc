@@ -66,13 +66,13 @@ source ~/.zshrc
 
 # 🛠️ Sistem Sürücü Kurulumları
 
-### 🔋 Güç Yönetimi
+#### 🔋 Güç Yönetimi
 ```bash
 sudo pacman -S power-profiles-daemon     # Güç yönetimi aracı
 sudo systemctl enable --now power-profiles-daemon  # Güç yönetimi servisini etkinleştir ve başlat
 ```
 
-### 🔵 Bluetooth Yönetimi
+#### 🔵 Bluetooth Yönetimi
 ```bash
 sudo pacman -S bluez bluez-utils     # Bluetooth desteği sağlayan paketler
 sudo systemctl enable bluetooth --now  # Bluetooth servisini etkinleştir ve başlat
@@ -81,14 +81,14 @@ sudo systemctl enable bluetooth --now  # Bluetooth servisini etkinleştir ve ba�
 
 # 🧰 KDE Applications
 
-### 📊 Hesaplama ve Ofis Araçları
+#### 📊 Hesaplama ve Ofis Araçları
 ```bash
 sudo pacman -S kcalc            # Hesap makinesi
 sudo pacman -S libreoffice      # Ofis paketi
 sudo pacman -S okular           # PDF görüntüleyici
 sudo pacman -S kate             # Gelişmiş metin editörü
 ```
-### 🖼️ Resim ve Fotoğraf Yönetimi
+#### 🖼️ Resim ve Fotoğraf Yönetimi
 ```bash
 sudo pacman -S gwenview         # Resim görüntüleyici
 sudo pacman -S digikam          # Fotoğraf yönetimi
@@ -96,7 +96,7 @@ sudo pacman -S krita            # Dijital resim yazılımı
 sudo pacman -S gimp             # Görsel düzenleme yazılımı
 ```
 
-### 🎥 Video ve Multimedya
+#### 🎥 Video ve Multimedya
 ```bash
 sudo pacman -S vlc              # Video oynatıcı
 sudo pacman -S elisa            # Müzik oynatıcı
@@ -106,13 +106,13 @@ sudo pacman -S ktorrent         # Torrent istemcisi
 sudo pacman -S kdenlive         # Video düzenleme yazılımı
 ```
 
-### 📧 İletişim ve Şifre Yönetimi
+#### 📧 İletişim ve Şifre Yönetimi
 ```bash
 sudo pacman -S kmail            # E-posta istemcisi
 sudo pacman -S kwallet kwalletmanager # Şifre yönetimi
 ```
 
-### 🛠️ Sistem Araçları ve Yönetimi
+#### 🛠️ Sistem Araçları ve Yönetimi
 ```bash
 sudo pacman -S timeshift        # Sistem yedekleme aracı
 sudo pacman -S partitionmanager # Disk bölümleme aracı
@@ -124,7 +124,7 @@ sudo pacman -S kget             # İndirme yöneticisi
 sudo pacman -S filelight        # Disk kullanım görselleştirme
 ```
 
-### ⚙️ Uygulama Başlatıcı ve Diğer Araçlar
+#### ⚙️ Uygulama Başlatıcı ve Diğer Araçlar
 ```bash
 sudo pacman -S krunner          # Uygulama başlatıcı
 sudo pacman -S kdeconnect       # Telefon-PC entegrasyonu
@@ -134,7 +134,7 @@ sudo pacman -S kleopatra        # Sertifika yönetimi
 sudo pacman -S yakuake          # Açılır terminal
 ```
 
-### 🖥️ Sistem Bilgisi ve İzleme
+#### 🖥️ Sistem Bilgisi ve İzleme
 ```bash
 sudo pacman -S neofetch         # Sistem bilgisi gösterimi
 ```
@@ -151,44 +151,44 @@ sudo pacman -S mtr             # Ağ bağlantı testi ve takibi
 sudo pacman -S speedtest-cli   # İnternet hız testi
 ```
 
-### 🔌 USB ve Donanım Araçları
+#### 🔌 USB ve Donanım Araçları
 ```bash
 sudo pacman -S usbutils        # USB cihazlarını gör (lsusb)
 sudo pacman -S lm_sensors      # Donanım sıcaklık sensörleri - Bilgisayarın sıcaklık, voltaj ve fan hızını izlemek için kullanılır.
 sudo pacman -S htop            # Sistem kaynakları izleme
 ```
 
-### 🔐 Güvenlik ve Bağlantı Araçları
+#### 🔐 Güvenlik ve Bağlantı Araçları
 ```bash
 sudo pacman -S openssh         # SSH sunucu ve istemci
 sudo pacman -S quota           # Disk kotası yönetimi
 ```
 
-### 🖥️ Dosya Sistemi ve Depolama Araçları
+#### 🖥️ Dosya Sistemi ve Depolama Araçları
 ```bash
 sudo pacman -S ntfs-3g exfat-utils dosfstools # Dosya sistemi desteği (NTFS, exFAT, FAT32)
 sudo pacman -S partitionmanager  # Disk bölümleme aracı
 ```
 
-### 📊 Sistem Bilgisi ve İzleme Araçları
+#### 📊 Sistem Bilgisi ve İzleme Araçları
 ```bash
 sudo pacman -S neofetch        # Sistem bilgisi gösterimi
 ```
 
-## 🧑‍💻 Geliştirici Araçları
+# 🧑‍💻 Geliştirici Araçları
 
-### Kubernetes
+#### Kubernetes
 ```bash
 sudo pacman -S kubectl kubectx
 ```
 
-### Terraform & Ansible
+#### Terraform & Ansible
 ```bash
 sudo pacman -S terraform    # Infrastructure as Code
 sudo pacman -S ansible      # Otomasyon ve konfigürasyon yönetimi
 ```
 
-### Docker
+#### Docker
 ```bash
 sudo pacman -S docker docker-compose
 sudo systemctl enable --now docker
@@ -197,33 +197,33 @@ newgrp docker
 docker run hello-world
 ```
 
-### Docker Desktop (İsteğe bağlı)
+#### Docker Desktop (İsteğe bağlı)
 ```bash
 yay -S docker-desktop
 systemctl --user enable --now docker-desktop
 ```
 
-### Visual Studio Code
+#### Visual Studio Code
 ```bash
 yay -S visual-studio-code-bin
 ```
 
-### Lens
+#### Lens
 ```bash
 yay -S lens
 ```
 
 ---
 
-## 🔒 Güvenlik
+# 🔒 Güvenlik
 
-### UFW (Firewall)
+#### UFW (Firewall)
 ```bash
 sudo pacman -S ufw
 sudo systemctl enable --now ufw
 ```
 
-### GPG ve Pass (şifre yönetimi)
+#### GPG ve Pass (şifre yönetimi)
 ```bash
 sudo pacman -S pass gnupg
 gpg --full-generate-key
@@ -233,8 +233,9 @@ pass init YOUR_GPG_KEY_ID
 
 ---
 
-## 🌐 Uygulamalar (AUR Üzerinden)
+# 🌐 Uygulamalar (AUR Üzerinden)
 
+#### Arch Yay(AUR) Kurulumu
 ```bash
 mkdir Workdir && cd Workdir
 git clone https://aur.archlinux.org/yay.git
@@ -242,7 +243,7 @@ cd yay
 makepkg -si
 ```
 
-### AUR'dan uygulama kurulumları:
+#### AUR'dan uygulama kurulumları:
 ```bash
 yay -S visual-studio-code-bin
 yay -S docker-desktop
@@ -257,7 +258,7 @@ yay -S octopi
 
 ---
 
-## 🐳 Docker Compose Projesi Örneği
+#### 🐳 Docker Compose Projesi Örneği
 
 ```bash
 cd ~/Workdir
@@ -268,7 +269,7 @@ docker compose up -d
 
 ---
 
-## 📊 Sistem Araçları ve Bilgileri
+# 📊 Sistem Araçları ve Bilgileri
 
 ```bash
 mtr <ip_adresi>
@@ -279,8 +280,9 @@ htop
 
 ---
 
-## 🛡️ VPN
+# 🛡️ VPN
 
+#### Globalprotect Kurulum
 ```bash
 globalprotect connect -p remote.mokaunited.com -u <kullanıcı_adı>
 ```
