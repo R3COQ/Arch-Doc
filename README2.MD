@@ -47,9 +47,11 @@ sudo pacman -S power-profiles-daemon     # Güç yönetimi aracı
 sudo systemctl enable --now power-profiles-daemon  # Güç yönetimi servisini etkinleştir ve başlat
 ```
 
+# 🔵 Bluetooth Yönetimi
 ```bash
-sudo pacman -S bluez bluez-utils
-sudo systemctl enable bluetooth --now
+sudo pacman -S bluez bluez-utils     # Bluetooth desteği sağlayan paketler
+sudo systemctl enable bluetooth --now  # Bluetooth servisini etkinleştir ve başlat
+
 ```
 
 # 🧰 KDE Applications
