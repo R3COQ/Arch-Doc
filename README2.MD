@@ -155,7 +155,6 @@ sudo pacman -S speedtest-cli   # İnternet hız testi
 ```bash
 sudo pacman -S usbutils        # USB cihazlarını gör (lsusb)
 sudo pacman -S lm_sensors      # Donanım sıcaklık sensörleri - Bilgisayarın sıcaklık, voltaj ve fan hızını izlemek için kullanılır.
-sudo pacman -S htop            # Sistem kaynakları izleme
 ```
 
 #### 🔐 Güvenlik ve Bağlantı Araçları
@@ -172,11 +171,13 @@ sudo pacman -S partitionmanager  # Disk bölümleme aracı
 #### 📊 Sistem Bilgisi ve İzleme Araçları
 ```bash
 sudo pacman -S neofetch        # Sistem bilgisi gösterimi
+sudo pacman -S htop            # Sistem kaynakları izleme
+sudo pacman -S btop            # Sistem kaynakları izleme
 ```
 
 # 🧑‍💻 Geliştirici Araçları
 
-#### Kubernetes
+#### 🐳 Kubernetes Eklentileri Kurulumu
 ```bash
 sudo pacman -S kubectl kubectx
 ```
@@ -196,18 +197,18 @@ newgrp docker
 docker run hello-world
 ```
 
-#### Docker Desktop (İsteğe bağlı)
+#### 🐳 Docker Desktop (İsteğe bağlı)
 ```bash
 yay -S docker-desktop
 systemctl --user enable --now docker-desktop
 ```
 
-#### Visual Studio Code
+#### 🖥️ Visual Studio Code
 ```bash
 yay -S visual-studio-code-bin
 ```
 
-#### Lens
+#### 🐳 Lens
 ```bash
 yay -S lens
 ```
@@ -216,13 +217,13 @@ yay -S lens
 
 # 🔒 Güvenlik
 
-#### UFW (Firewall)
+#### 🛡️ UFW (Firewall)
 ```bash
 sudo pacman -S ufw
 sudo systemctl enable --now ufw
 ```
 
-#### GPG ve Pass (şifre yönetimi)
+#### 🔑 GPG ve Pass (şifre yönetimi)
 ```bash
 sudo pacman -S pass gnupg
 gpg --full-generate-key
@@ -234,7 +235,7 @@ pass init YOUR_GPG_KEY_ID
 
 # 🌐 Uygulamalar (AUR Üzerinden)
 
-#### Arch Yay(AUR) Kurulumu
+#### 🌐 Arch Yay(AUR) Kurulumu
 ```bash
 mkdir Workdir && cd Workdir
 git clone https://aur.archlinux.org/yay.git
@@ -242,7 +243,7 @@ cd yay
 makepkg -si
 ```
 
-#### AUR'dan uygulama kurulumları:
+#### 🌐 AUR'dan uygulama kurulumları:
 ```bash
 yay -S visual-studio-code-bin
 yay -S docker-desktop
@@ -281,7 +282,7 @@ htop
 
 # 🛡️ VPN
 
-#### Globalprotect Kurulum
+#### 🛜 Globalprotect Kurulum
 ```bash
 globalprotect connect -p remote.mokaunited.com -u <kullanıcı_adı>
 ```
