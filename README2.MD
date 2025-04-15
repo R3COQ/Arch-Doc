@@ -196,14 +196,28 @@ yay -S docker-desktop
 systemctl --user enable --now docker-desktop
 ```
 
-#### 🖥️ Visual Studio Code
+# 🌐 Uygulamalar (AUR Üzerinden)
+
+#### 🌐 Arch Yay(AUR) Kurulumu
 ```bash
-yay -S visual-studio-code-bin
+mkdir Workdir && cd Workdir
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
-#### 🐳 Lens
+#### 🌐 AUR'dan uygulama kurulumları:
 ```bash
+yay -S visual-studio-code-bin
 yay -S lens
+yay -S docker-desktop
+yay -S google-chrome 
+yay -S opera spotify
+yay -S slack-desktop 
+yay -S zapzap 
+yay -S teams-for-linux-bin 
+yay -S postman
+yay -S octopi
 ```
 
 ---
@@ -222,31 +236,6 @@ sudo pacman -S pass gnupg
 gpg --full-generate-key
 gpg --list-keys
 pass init YOUR_GPG_KEY_ID
-```
-
----
-
-# 🌐 Uygulamalar (AUR Üzerinden)
-
-#### 🌐 Arch Yay(AUR) Kurulumu
-```bash
-mkdir Workdir && cd Workdir
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-```
-
-#### 🌐 AUR'dan uygulama kurulumları:
-```bash
-yay -S visual-studio-code-bin
-yay -S docker-desktop
-yay -S google-chrome 
-yay -S opera spotify
-yay -S slack-desktop 
-yay -S zapzap 
-yay -S teams-for-linux-bin 
-yay -S postman
-yay -S octopi
 ```
 
 ---
