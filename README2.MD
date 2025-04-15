@@ -209,14 +209,15 @@ makepkg -si
 #### 🌐 AUR'dan uygulama kurulumları:
 ```bash
 yay -S visual-studio-code-bin
-yay -S lens
+yay -S lens-bin
 yay -S docker-desktop
 yay -S google-chrome 
-yay -S opera spotify
+yay -S opera
+yay -S spotify
 yay -S slack-desktop 
 yay -S zapzap 
 yay -S teams-for-linux-bin 
-yay -S postman
+yay -S postman-bin
 yay -S octopi
 ```
 
