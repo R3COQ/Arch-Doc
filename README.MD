@@ -47,7 +47,6 @@ source ~/.zshrc
 ```
 - **Açıklama**: Yapılandırma dosyanızı yeniden yükler ve yapılan değişikliklerin aktif olmasını sağlar.
 
-
 ---
 
 # 🛠️ Sistem Sürücü Kurulumları
@@ -144,6 +143,7 @@ sudo pacman -S quota           # Disk kotası yönetimi
 #### 🖥️ Dosya Sistemi ve Depolama Araçları
 ```bash
 sudo pacman -S ntfs-3g exfat-utils dosfstools # Dosya sistemi desteği (NTFS, exFAT, FAT32)
+sudo pacman -S fzf
 ```
 
 #### 📊 Sistem Bilgisi ve İzleme Araçları
