@@ -2,7 +2,7 @@
 # 📘 Arch Linux Kurulum ve Yapılandırma Dökümantasyonu
 
 
-#🐚 Zsh Yapılandırması
+# 🐚 Zsh Yapılandırması
 
 ## 1. **Zsh Kurulumu**
 
