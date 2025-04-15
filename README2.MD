@@ -29,31 +29,17 @@ nano .zshrc
 ```
 
 ### 🔌 Eklentiler
-
-1. **🔄 Autosuggestions**
 ```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-- **Açıklama**: Bu eklenti, komutları yazarken geçmiş komutlardan otomatik öneriler sunar.
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 
-2. **🎨 Syntax Highlighting**
-```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-- **Açıklama**: Komut satırındaki sözdizimi hatalarını renkli olarak vurgular.
+plugins=(git z sudo fzf-tab colored-man-pages zsh-history-substring-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
-3. **🔍 History Substring Search**
-```bash
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+autoload -U compinit && compinit
 ```
-- **Açıklama**: Geçmişteki komutları, sadece komutun bir kısmıyla aramanıza olanak tanır.
-
-4. **🔲 fzf-tab**
-```bash
-sudo pacman -S fzf          # fzf komut satırı aracı kurulur
-git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
-```
-- **Açıklama**: Bu eklenti, sekme tamamlama için `fzf` arayüzünü entegre eder ve daha hızlı dosya aramaları sağlar.
 
 #### 🔄 Zsh Konfigürasyonunun Yüklenmesi
 ```bash
@@ -128,7 +114,6 @@ sudo pacman -S filelight        # Disk kullanım görselleştirme
 ```bash
 sudo pacman -S krunner          # Uygulama başlatıcı
 sudo pacman -S kdeconnect       # Telefon-PC entegrasyonu
-sudo pacman -S plasma-firewall  # Güvenlik duvarı arayüzü
 sudo pacman -S power-profiles-daemon # Güç yönetimi
 sudo pacman -S kleopatra        # Sertifika yönetimi
 sudo pacman -S yakuake          # Açılır terminal
