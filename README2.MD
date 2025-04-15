@@ -134,12 +134,6 @@ sudo pacman -S kleopatra        # Sertifika yönetimi
 sudo pacman -S yakuake          # Açılır terminal
 ```
 
-#### 🖥️ Sistem Bilgisi ve İzleme
-```bash
-sudo pacman -S neofetch         # Sistem bilgisi gösterimi
-```
-
-
 # 🧰 Sistem Uygulama Kurulumları
 
 #### 🌐 Ağ Araçları
@@ -165,7 +159,6 @@ sudo pacman -S quota           # Disk kotası yönetimi
 #### 🖥️ Dosya Sistemi ve Depolama Araçları
 ```bash
 sudo pacman -S ntfs-3g exfat-utils dosfstools # Dosya sistemi desteği (NTFS, exFAT, FAT32)
-sudo pacman -S partitionmanager  # Disk bölümleme aracı
 ```
 
 #### 📊 Sistem Bilgisi ve İzleme Araçları
