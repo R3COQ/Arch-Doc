@@ -26,6 +26,8 @@ Kurulumdan sonra, ~/.zshrc dosyasına otomatik olarak Oh-My-Zsh yapılandırmas�
 
 ```bash
 nano .zshrc
+
+plugins=(git z sudo fzf-tab colored-man-pages zsh-history-substring-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
 ### 🔌 Eklentiler
@@ -35,8 +37,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
-
-plugins=(git z sudo fzf-tab colored-man-pages zsh-history-substring-search zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 autoload -U compinit && compinit
 ```
