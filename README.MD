@@ -104,7 +104,6 @@ sudo pacman -S partitionmanager # Disk bölümleme aracı
 sudo pacman -S ksystemlog       # Sistem log görüntüleyici
 sudo pacman -S kompare          # Dosya karşılaştırma aracı
 sudo pacman -S kgpg             # GPG arayüzü
-sudo pacman -S isoimagewriter   # ISO yazma aracı
 sudo pacman -S kget             # İndirme yöneticisi
 sudo pacman -S filelight        # Disk kullanım görselleştirme
 ```
